@@ -123,7 +123,7 @@ public class AccesoBD extends HttpServlet {
                         try {
                             sentencia = conexion.createStatement();
                             resultado = sentencia.executeQuery(sql);
-                            aves = new ArrayList<Ave>();
+                            aves = new ArrayList<>();
                             while (resultado.next()) {
                                 ave = new Ave();
                                 ave.setAnilla(resultado.getString(1));
@@ -160,7 +160,7 @@ public class AccesoBD extends HttpServlet {
                     sql = "SELECT * FROM aves";
                     sentencia = conexion.createStatement();
                     resultado = sentencia.executeQuery(sql);
-                    aves = new ArrayList<Ave>();
+                    aves = new ArrayList<>();
                     while (resultado.next()) {
                         ave = new Ave();
                         ave.setAnilla(resultado.getString(1));
